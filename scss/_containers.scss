@@ -1,0 +1,10 @@
+.review__text {
+    padding: 32px 65px 48px 60px;
+    @media screen and (max-width: 576px) {
+        padding: 25px calc(50vw - 220px);
+    }
+    @media screen and (max-width: 425px) {
+        padding: 10px;
+    }
+    
+}

@@ -1,0 +1,222 @@
+@media screen and (max-width: 992px) {
+    .review {
+        padding: 60px 0 120px;
+
+        &__info {
+            flex-direction: column;
+        }
+
+        &__photo {
+            max-height: 420px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .review {
+        &__photo {
+            max-height: 335px;
+        }
+    }
+
+    .menu {
+        &__container {
+            flex-direction: column;
+            gap: 32px
+        }
+    }
+
+    .choose {
+        &__container {
+            flex-direction: column-reverse;
+            align-items: normal;
+        }
+
+        &__info {
+            margin: 32px auto;
+            text-align: center;
+        }
+
+        &__imgs {
+            display: flex;
+            flex-direction: row;
+            max-width: 750px;
+            width: 100%;
+            margin: 60px 0 0 0;
+
+            &_flex {
+                min-width: 170px;
+            }
+        }
+
+        &__img-first {
+            margin-bottom: 0;
+        }
+
+        &__img-second {
+            display: block;
+        }
+    }
+
+    .select-places {
+        height: auto;
+        padding: 50px 0;
+
+        &__container {
+            flex-direction: column;
+        }
+    }
+
+    .line-img {
+        display: none;
+    }
+
+    .container {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .search-form {
+        &__input {
+           
+            font-size: 12px;
+            line-height: 20px;
+            letter-spacing: 0.15em;
+            
+            padding-left: 20px;
+        }
+    }
+
+    .menu {
+        &__container {
+            flex-direction: row;
+            gap: 0;
+        }
+
+        &__burger {
+            &:checked~.burger-list {
+                right: -58px;
+            }
+
+            &:checked~.menu__burger-img {
+                transform: rotate(45deg);
+
+                &::before {
+                    opacity: 0;
+                }
+
+                &::after {
+                    top: 0px;
+                    transform: rotate(90deg);
+                }
+            }
+
+        }
+
+        &__burger-img {
+
+            display: inline-block;
+            width: 35px;
+            height: 2px;
+            position: relative;
+            top: 50%;
+            right: -18vw;
+            background: #ffffff;
+            vertical-align: middle;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 9px;
+                display: inline-block;
+                width: 100%;
+                height: 2px;
+                background: #ffffff;
+            }
+
+            &::after {
+                top: -9px;
+            }
+
+        }
+
+        &__item {
+            @media screen and (max-width: 576px) {
+                margin: 0 15px;
+                padding: 18px 16px;
+                width: 100%;
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 50px;
+                background: #5373FD;
+                color: #fff;
+            }
+
+        }
+
+    }
+
+    .burger-list {
+
+        position: absolute;
+        top: 34px;
+        right: 400px;
+        width: 50%;
+        min-width: 320px;
+        flex-direction: column;
+        z-index: 3;
+        transition: all 0.3s linear;
+
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+
+    .header__search {
+        display: flex;
+    }
+
+    .search-form {
+        &__btn {
+            position: static;
+            width: 280px;
+        }
+
+    }
+
+    .menu {
+        &__burger-img {
+            right: -12vw;
+        }
+    }
+
+    .choose {
+
+        &__imgs {
+            flex-direction: column;
+            align-items: center;
+            margin: 30px 0 0 0;
+
+            &_flex {
+                max-width: 260px;
+            }
+        }
+
+        &__text {
+            margin: 16px 0;
+        }
+    }
+
+    .text {
+        font-size: 14px;
+        line-height: 26px;
+    }
+
+    .title {
+        text-align: center;
+    }
+}
